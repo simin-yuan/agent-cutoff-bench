@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-22T20:32:25.527Z",
+  "sourceCommit": "7d88b2fb82ffe8c5ce6fea605e991523e7dd2914",
+  "platform": "win32",
+  "release": "10.0.26200",
+  "arch": "x64",
+  "node": "v22.23.2",
+  "npm": "10.9.8",
+  "python": "Python 3.12.10",
+  "install": {
+    "command": "npm ci --ignore-scripts --strict-peer-deps --no-audit --no-fund --cache <fresh-empty-task-cache>",
+    "exitCode": 0,
+    "nodeModulesPresentBeforeInstall": false,
+    "symlinkOrOverlay": false
+  },
+  "firstRun": {
+    "command": "npm run test:raw-policy",
+    "sourceCommit": "b0f729805f3686d30f14f9290dd1dc88de5a10f2",
+    "exitCode": 1,
+    "firstFailure": "reset-native-check: actual request count 1 !== 0; fetch failed before capture observation",
+    "rowsRetained": 11
+  },
+  "secondRun": {
+    "command": "npm run test:raw-policy",
+    "exitCode": 0,
+    "cases": 12
+  }
+}

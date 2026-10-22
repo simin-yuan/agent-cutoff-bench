@@ -1,0 +1,6 @@
+﻿{
+    "command":  "npm ci --ignore-scripts --strict-peer-deps --engine-strict --no-audit --no-fund --cache \u003cisolated cache\u003e",
+    "cwd":  "C:\\dev\\agent-cutoff-currentpins-review-20261022\\harness\\js",
+    "exit":  0,
+    "utc":  "2026-10-22T20:29:06.9495056Z"
+}

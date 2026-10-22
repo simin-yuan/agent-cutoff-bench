@@ -1,0 +1,126 @@
+{
+  "cases": 12,
+  "versions": {
+    "@langchain/core": "1.3.0",
+    "@langchain/openai": "1.7.0",
+    "@langchain/langgraph": "1.5.2"
+  },
+  "node": "v22.23.2",
+  "modes": [
+    {
+      "mode": "complete",
+      "client": "native",
+      "writes": 1,
+      "bytes": 2120,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "complete",
+      "client": "native-check",
+      "writes": 1,
+      "bytes": 2120,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "complete",
+      "client": "psj",
+      "writes": 1,
+      "bytes": 2120,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "length",
+      "client": "native",
+      "writes": 1,
+      "bytes": 866,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "length",
+      "client": "native-check",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "length",
+      "client": "psj",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "drop",
+      "client": "native",
+      "writes": 1,
+      "bytes": 866,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "drop",
+      "client": "native-check",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "drop",
+      "client": "psj",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 2,
+      "final_answer": "Done.",
+      "outcome": "returned"
+    },
+    {
+      "mode": "reset",
+      "client": "native",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 1,
+      "outcome": "raised"
+    },
+    {
+      "mode": "reset",
+      "client": "native-check",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 1,
+      "outcome": "raised"
+    },
+    {
+      "mode": "reset",
+      "client": "psj",
+      "writes": 0,
+      "bytes": 0,
+      "requests": 1,
+      "outcome": "raised"
+    }
+  ],
+  "conclusion": "Measured native-check/PSJ equivalence; maintenance preference and independent use unverified",
+  "pairedModes": [
+    "complete",
+    "length",
+    "drop"
+  ],
+  "resetControl": "Real TCP reset; observed delivery can differ; all clients must refuse before writes",
+  "output": "C:\\dev\\prefixjson\\artifacts\\langgraph-currentpins-review-20261022\\results",
+  "timestampsExcludedFromFingerprintOnly": true,
+  "fixtures": "existing four single-call server modes"
+}
