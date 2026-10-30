@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this bench in your work, please cite it as below."
+title: "Agent Cutoff Bench"
+abstract: >-
+  Does an agent run a tool call whose arguments were cut off? A model that
+  streams a long tool call and stops at its token limit delivers incomplete arguments;
+  the safe behaviour is not to run that call. This bench checks what agent frameworks
+  actually do, using a fake model server that cuts the same tool call the same way for
+  every client. Every per-run record names the client and its version, so each number
+  in the write-up can be re-derived instead of trusted.
+authors:
+  - family-names: Yuan
+    given-names: "Simin"
+    orcid: "https://orcid.org/0009-0002-6843-3390"
+    alias: simin-yuan
+    website: "https://github.com/simin-yuan"
+license: Apache-2.0
+repository-code: "https://github.com/simin-yuan/agent-cutoff-bench"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23808696
+    description: "Raw measurement records (dataset, CC-BY-4.0)"
+keywords:
+  - agents
+  - tool calling
+  - truncation
+  - benchmark
+  - failure modes
