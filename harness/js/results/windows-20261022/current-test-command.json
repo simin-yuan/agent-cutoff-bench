@@ -1,0 +1,12 @@
+﻿{
+    "command":  "npm run test:raw-policy",
+    "cwd":  "C:\\dev\\agent-cutoff-currentpins-review-20261022\\harness\\js",
+    "startedUtc":  "2026-10-22T20:31:02.4425060Z",
+    "finishedUtc":  "2026-10-22T20:32:04.6208582Z",
+    "exit":  0,
+    "invocationCount":  1,
+    "validationHead":  "0d30e3562c843663e8ecc9e4746045c4bb49e516",
+    "sourceFix":  "7d88b2fb82ffe8c5ce6fea605e991523e7dd2914",
+    "resultDirectory":  "C:\\dev\\prefixjson\\artifacts\\langgraph-currentpins-review-20261022\\results",
+    "sourcePins":  "core1.3.0/openai1.7.0/langgraph1.5.2/zod4.6.7/psj0.6.3"
+}

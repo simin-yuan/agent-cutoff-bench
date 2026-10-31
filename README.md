@@ -163,6 +163,16 @@ python server.py 8765 &
 cd harness && python run_langgraph.py http://127.0.0.1:8765 length chat stream
 ```
 
+An optional [raw-admission comparison](harness/js/RAW_POLICY.md) uses this
+benchmark's actual LangGraph.js agent and file-writing tool with native,
+small raw-native and published PSJ core 0.6.3 checks. Run
+`npm ci --ignore-scripts --strict-peer-deps --no-audit --no-fund` and
+`npm run test:raw-policy` in `harness/js` (Node 22+ and Python 3).
+It keeps the existing LangChain pins, server modes and default matrix.
+The earlier AI SDK-only proposal remains in commit `e28b5c4`; it already
+prevented these writes and did not address this benchmark's LangGraph path.
+See [measured results and limitations](harness/js/RESULTS.md).
+
 ## Versions
 
 | Client | Version |

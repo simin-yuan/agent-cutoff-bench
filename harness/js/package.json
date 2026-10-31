@@ -2,10 +2,16 @@
   "name": "agent-cutoff-bench-js",
   "private": true,
   "type": "module",
+  "scripts": {
+    "test:raw-policy": "node verify_raw_policy.mjs"
+  },
   "dependencies": {
     "@langchain/core": "1.2.18",
     "@langchain/langgraph": "1.5.1",
     "@langchain/openai": "1.6.2",
     "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "prefix-safe-json": "0.6.3"
   }
 }
