@@ -1,0 +1,3 @@
+{"t": 1793645768.598, "mode": "drop", "endpoint": "chat", "stream": true, "turn": "first", "tools_offered": ["write_file"], "tool_called": "write_file", "max_tokens_sent": {"max_tokens": 300}}
+{"t": 1793645768.624, "mode": "drop", "endpoint": "chat", "stream": true, "turn": "after_tool_result", "tools_offered": ["write_file"], "tool_called": null, "max_tokens_sent": {"max_tokens": 300}, "tool_result_seen": "Wrote 866 characters to report.txt"}
+{"t": 1793645768.634, "mode": "drop", "endpoint": "chat", "stream": true, "turn": "first", "tools_offered": ["write_file"], "tool_called": "write_file", "max_tokens_sent": {"max_tokens": 300}}

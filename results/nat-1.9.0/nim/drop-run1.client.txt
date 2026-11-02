@@ -1,0 +1,8 @@
+$WORK/natv/lib/python3.13/site-packages/nat/authentication/credential_validator/bearer_token_validator.py:25: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey
+$WORK/natv/lib/python3.13/site-packages/langchain_nvidia_ai_endpoints/chat_models.py:1158: UserWarning: Model 'bench-model' is not known to support tools. Your tool binding may fail at inference time.
+  warnings.warn(
+$WORK/natv/lib/python3.13/site-packages/langchain_nvidia_ai_endpoints/chat_models.py:1158: UserWarning: Model 'bench-model' is not known to support tools. Your tool binding may fail at inference time.
+  warnings.warn(
+RECORD {"framework": "nat-tool_calling_agent-nim", "mode": "drop", "versions": {"nvidia-nat-core": "1.9.0", "nvidia-nat-langchain": "1.9.0", "langchain-nvidia-ai-endpoints": "1.5.0", "langchain-core": "1.7.3"}, "final_output": "Done.", "outcome": "returned", "tool_executed": true, "tool_calls": [{"path": "report.txt", "content_chars": 866}], "disk": {"file_written": true, "bytes": 866, "newline_terminated_lines": 16, "last_line": "line 17: the quick", "complete": false}, "probe": {"response_metadata": {}, "tool_call_content_chars": [866], "invalid_tool_calls": 0}}

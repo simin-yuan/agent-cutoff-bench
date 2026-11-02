@@ -1,0 +1,2 @@
+{"t": 1793645757.982, "mode": "length", "endpoint": "chat", "stream": true, "turn": "first", "tools_offered": ["write_file"], "tool_called": "write_file", "max_tokens_sent": {"max_tokens": 300}}
+{"t": 1793645758.009, "mode": "length", "endpoint": "chat", "stream": true, "turn": "first", "tools_offered": ["write_file"], "tool_called": "write_file", "max_tokens_sent": {"max_tokens": 300}}

@@ -1,0 +1,12 @@
+$WORK/natv/lib/python3.13/site-packages/nat/authentication/credential_validator/bearer_token_validator.py:25: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey
+$WORK/natv/lib/python3.13/site-packages/langchain_nvidia_ai_endpoints/chat_models.py:1158: UserWarning: Model 'bench-model' is not known to support tools. Your tool binding may fail at inference time.
+  warnings.warn(
+[AGENT] Failed to call agent_node: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')
+[AGENT] Tool Calling Agent failed with exception: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')
+Error with ainvoke in function with input: Write the 40-line report to report.txt.. Error: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')
+Error running workflow: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')
+$WORK/natv/lib/python3.13/site-packages/langchain_nvidia_ai_endpoints/chat_models.py:1158: UserWarning: Model 'bench-model' is not known to support tools. Your tool binding may fail at inference time.
+  warnings.warn(
+RECORD {"framework": "nat-tool_calling_agent-nim", "mode": "reset", "versions": {"nvidia-nat-core": "1.9.0", "nvidia-nat-langchain": "1.9.0", "langchain-nvidia-ai-endpoints": "1.5.0", "langchain-core": "1.7.3"}, "outcome": "raised", "error": "ClientPayloadError: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')", "tool_executed": false, "tool_calls": [], "disk": {"file_written": false}, "probe": {"stream_error": "ClientPayloadError: Response payload is not completed: <TransferEncodingError: 400, message='Not enough data to satisfy transfer length header.'>. ConnectionResetError(104, 'Connection reset by peer')", "partial": {}}}

@@ -1,0 +1,10 @@
+$WORK/natv/lib/python3.13/site-packages/nat/authentication/credential_validator/bearer_token_validator.py:25: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey
+langchain-openai injected a custom httpx transport to apply `http_socket_options`, which disables httpx's proxy auto-detection (HTTPS_PROXY, https_proxy set in environment). Set `LANGCHAIN_OPENAI_TCP_KEEPALIVE=0` or pass `http_socket_options=()` to restore default proxy behavior, or supply `openai_proxy` / your own `http_client` / `http_async_client` to take full control.
+[AGENT] Failed to call agent_node: Connection error.
+[AGENT] Tool Calling Agent failed with exception: Connection error.
+Error with ainvoke in function with input: Write the 40-line report to report.txt.. Error: Connection error.
+Error running workflow: Connection error.
+{"run_id": "nat-chat-stream-reset-run2", "framework": "nat-tool_calling_agent", "versions": {"nvidia-nat": "1.9.0", "nvidia-nat-langchain": "1.9.0", "langchain-core": "1.7.3", "langchain-openai": "1.7.3", "langgraph": "1.2.19", "openai": "3.42.1"}, "mode": "reset", "api": "chat", "streaming": true, "outcome": "raised", "error": "OpenAIConnectionError: Connection error.", "tool_executed": false, "tool_calls": [], "disk": {"file_written": false}}
+exit=0 wall_s=3.65

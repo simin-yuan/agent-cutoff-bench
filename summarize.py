@@ -15,6 +15,8 @@ NAMES = {
     "smolagents": "smolagents",
     "codex-cli": "Codex CLI (`codex exec`)",
     "hermes-agent": "Hermes Agent (control)",
+    "nat": "NeMo Agent Toolkit (`tool_calling_agent`)",
+    "nat-nim": "NeMo Agent Toolkit (`tool_calling_agent`, `_type: nim`)",
 }
 
 

@@ -1,0 +1,3 @@
+{"t": 1793645750.481, "method": "POST", "path": "/complete/v1/chat/completions", "host": "127.0.0.1:59299", "user_agent": "langchain-nvidia-ai-endpoints"}
+{"t": 1793645750.533, "method": "POST", "path": "/complete/v1/chat/completions", "host": "127.0.0.1:59299", "user_agent": "langchain-nvidia-ai-endpoints"}
+{"t": 1793645750.544, "method": "POST", "path": "/complete/v1/chat/completions", "host": "127.0.0.1:59299", "user_agent": "langchain-nvidia-ai-endpoints"}

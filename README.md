@@ -31,8 +31,12 @@ line 17. The tool really writes to disk; the bench then reads the file back.
 | smolagents | Chat Completions | no | ran, full file | not run | not run | not run |
 | Codex CLI (`codex exec`) | Responses | yes | ran, full file | not run | not run | not run |
 | Hermes Agent (control) | Chat Completions | yes | ran, full file | not run | not run | not run |
+| NeMo Agent Toolkit (`tool_calling_agent`) | Chat Completions | yes | ran, full file | not run | **RAN: 16 of 40 lines** | not run |
+| NeMo Agent Toolkit (`tool_calling_agent`) | Responses | yes | ran, full file | **RAN: 16 of 40 lines** | **RAN: 16 of 40 lines** | not run |
+| NeMo Agent Toolkit (`tool_calling_agent`, `_type: nim`) | Chat Completions | yes | ran, full file | not run | **RAN: 16 of 40 lines** | not run |
 
 Generated from [`results/runs.jsonl`](results/runs.jsonl) by `python summarize.py results/runs.jsonl`.
+NeMo Agent Toolkit rows (added 2026-11-03): The model is the same local fake OpenAI-compatible server as every other row; no hosted model, no key. NAT 1.9.0 = tag `v1.9.0` (`baffefc68315b93e363cfd986c8f7e8dd45ce5e7`), `tool_calling_agent` workflow, `llms: {_type: openai}`, NAT defaults; NAT's agents always stream. The `_type: nim` row uses the NIM client (ChatNVIDIA, langchain-nvidia-ai-endpoints 1.5.0) against the same server. NAT has no non-streaming mode for these agents. n=3 per cell, run one after another, all 3 agreed; `results/runs.jsonl` holds run 1, all runs and logs are in [`results/nat-1.9.0/`](results/nat-1.9.0/).
 The `complete` column is the control: every client runs the full call, so the
 bench can see execution when it happens. In the `reset` column every client
 was run; "not run" means the connection error stopped the call.
@@ -138,6 +142,8 @@ A self-contained reproduction that needs no server is in
   changes `ChatModelStream` when `finishReason === "length"`; it does not touch
   `collapseToolCallChunks`, and a `drop` has no finish reason.
 
+- **NeMo Agent Toolkit:** `tool_calling_agent` refuses `finish_reason: "length"` on Chat Completions but runs the cut-off call when the stream ends without `finish_reason` (OpenAI and NIM clients) and when the Responses API reports `status: "incomplete"`. Reported in https://github.com/NVIDIA/NeMo-Agent-Toolkit/issues/2550, fix in https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2551 (not merged). `react_agent` with `use_native_tool_calling: true` has the same defect: https://github.com/NVIDIA/NeMo-Agent-Toolkit/issues/2552, fix https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2553.
+
 ## Run it yourself
 
 No API key and no network access to a model are needed.
@@ -173,6 +179,7 @@ cd harness && python run_langgraph.py http://127.0.0.1:8765 length chat stream
 | smolagents | 1.26.0 |
 | Codex CLI | 0.163.0 (`wire_api = "responses"`, `stream_max_retries = 1`) |
 | Hermes Agent | `6e9b3e3` (custom OpenAI-compatible endpoint, `hermes -z`) |
+| NeMo Agent Toolkit | nvidia-nat 1.9.0 (`baffefc`), nvidia-nat-langchain 1.9.0, langchain-core 1.7.3, langchain-openai 1.7.3, langchain-nvidia-ai-endpoints 1.5.0 |
 
 Each run records its versions in `results/runs.jsonl`.
 
