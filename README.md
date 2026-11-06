@@ -169,6 +169,15 @@ python server.py 8765 &
 cd harness && python run_langgraph.py http://127.0.0.1:8765 length chat stream
 ```
 
+Clients that speak the Anthropic Messages format instead of Chat Completions use
+`server_anthropic.py`, which serves the same four modes at
+`/<mode>/v1/messages`:
+
+```bash
+BENCH_LOG=runs.jsonl python server_anthropic.py 8766 &
+ANTHROPIC_BASE_URL=http://127.0.0.1:8766/length ANTHROPIC_API_KEY=unused   claude -p "write report.txt" --dangerously-skip-permissions
+```
+
 ## Versions
 
 | Client | Version |
