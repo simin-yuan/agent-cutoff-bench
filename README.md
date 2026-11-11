@@ -262,3 +262,6 @@ DOI [10.5281/zenodo.23808696](https://doi.org/10.5281/zenodo.23808696) — conce
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+---
+
+Part of the agent reliability toolkit → [agent-faultbench](https://github.com/simin-yuan/agent-faultbench)
