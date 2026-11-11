@@ -1,3 +1,5 @@
+> **Merged into [agent-faultbench](https://github.com/simin-yuan/agent-faultbench).** The suite is preserved there under `suites/cutoff`; this repository is archived and read-only.
+
 # agent-cutoff-bench
 
 **Does your agent run a tool call whose arguments were cut off?**
